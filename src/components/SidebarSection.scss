@@ -1,0 +1,69 @@
+.sidebar-section {
+  position: relative;
+  margin-top: 5.7%;
+  background: black;
+  font-size: 1em;
+}
+
+.menu-item {
+  background: #52448d;
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  border-top: 1px solid white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  &:hover {
+    background-color: #357ab8;
+  }
+  p {
+    display: inline;
+    margin: 0;
+  }
+  img {
+    display: inline;
+  }
+}
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1em;
+  img {
+    width: 100%;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row; // This will place your sidebar and content side by side
+}
+
+.sidebar-section {
+  flex: 0 0 auto; // This means your sidebar's size is based on its content
+  height: auto; // This allows your sidebar to grow as tall as it needs
+  // Other styles for your sidebar
+}
+
+.right-side-content {
+  flex: 1; // This will allow your content to grow and fill the remaining space
+  // Other styles for your content
+}
+
+@media (width < 768px) {
+  .sidebar-section {
+    display: none;
+  }
+}
