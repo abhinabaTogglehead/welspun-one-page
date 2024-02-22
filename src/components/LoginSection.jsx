@@ -1,7 +1,9 @@
 import React from "react";
 import "./LoginSection.scss";
 import { InvalidLogin, RightArrow } from "../assets";
+import { useNavigate } from "react-router-dom";
 function LoginSection() {
+  const navigate = useNavigate();
   return (
     <div className="login-section">
       <div className="login-container">
@@ -19,7 +21,7 @@ function LoginSection() {
             <input type="text" id="mobileNumber" />
           </label>
 
-          <button type="submit">
+          <button type="submit" onClick={ () => navigate("/dashboard")}>
             SUBMIT <img src={RightArrow} alt="right arrow" />
           </button>
         </form>

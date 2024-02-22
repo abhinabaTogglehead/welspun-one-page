@@ -8,7 +8,7 @@ function AllRoutes() {
     <div>
       <Routes>
         <Route path="/" element={<LoginSection />} />
-        <Route path="/main" element={<InvestmentSummery />} />
+        <Route path="/dashboard" element={<InvestmentSummery />} />
         <Route path="portfoliosummary" element={<PortfolioSummary />} />
       </Routes>
     </div>
