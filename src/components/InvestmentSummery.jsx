@@ -70,7 +70,9 @@ function InvestmentSummery() {
                   ) : (
                     <h3>{item?.text}</h3>
                   )}
-                  <p className="poppins-extrabold">{item?.price}</p>
+                  <p className="poppins-extrabold" style={{ color: "#00B5F0" }}>
+                    {item?.price}
+                  </p>
                 </div>
                 <div className="img-box">
                   {index === 4 || index === 5 ? (
