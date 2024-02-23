@@ -67,6 +67,7 @@ function SidebarSection() {
               <MenuItem
                 className="menu-item"
                 icon={<img src={Locations} alt="locations" />}
+                onClick={() => navigate("/bagalur")}
               >
                 Bagalur
               </MenuItem>

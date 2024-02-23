@@ -22,6 +22,13 @@ import PSummary1 from "./Group 1377.svg";
 import PSummary2 from "./Group 1378.svg";
 import PSummaryGIcon from "./Group 1159.svg";
 import PSummaryMainImage from "./psummeryMainImg.png";
+import BagalurMain from "./Bagalur/6f23180c19faad841aba26050911648ff0384a85-removebg-preview.png";
+import Bagalur1 from "./Bagalur/Group 1497.svg";
+import Bagalur2 from "./Bagalur/Group 1498.svg";
+import Bagalur3 from "./Bagalur/Group 1496.svg";
+import Bagalur4 from "./Bagalur/Group 1499.svg";
+import Bagalur5 from "./Bagalur/Group 1495.svg";
+import Building from "./Bagalur/Building Status.png";
 export {
   LogoImg,
   InvalidLogin,
@@ -47,4 +54,11 @@ export {
   PSummary2,
   PSummaryGIcon,
   PSummaryMainImage,
+  BagalurMain,
+  Bagalur1,
+  Bagalur2,
+  Bagalur3,
+  Bagalur4,
+  Bagalur5,
+  Building,
 };
