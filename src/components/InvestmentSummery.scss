@@ -1,6 +1,6 @@
 .investment-summery {
   width: 100%;
-  height: auto;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.25);
   background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
   background-repeat: no-repeat;
@@ -8,12 +8,13 @@
   background-size: cover;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   backdrop-filter: blur(50px);
   scrollbar-color: #333333;
   scrollbar-width: thin;
   position: relative;
+  overflow-y: hidden !important;
 }
 .investment-summery::after {
   content: "";
@@ -32,13 +33,15 @@
 
 #investment-summery-main-container {
   width: 80%;
-  height: auto;
+  height: 100vh;
   margin: auto;
   display: flex;
-  padding-top: 2em;
-  margin-top: 4.2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  align-items: safe;
   flex-direction: column;
   gap: 3em;
+  overflow-y: auto;
 }
 
 .folio-no {
@@ -142,6 +145,16 @@
       display: block;
       margin: auto;
     }
+  }
+}
+@media (width<=1024px) {
+  .investment-summery {
+    margin-top: 2em;
+    overflow-y: hidden;
+  }
+  #box-container {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-y: auto;
   }
 }
 

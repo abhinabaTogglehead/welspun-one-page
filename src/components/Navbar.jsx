@@ -9,7 +9,7 @@ function Navbar() {
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth < 769);
+      setIsMobile(window.innerWidth < 834);
     }
 
     window.addEventListener("resize", handleResize);
@@ -19,16 +19,16 @@ function Navbar() {
   return (
     <div className="navbar-container">
       {isMobile ? (
-        <>
+        <div className="mobile-navbar">
           <HiMenuAlt1 id="menu-icon" />
           <img src={LogoImg} alt="main logo" id="logo-img" />
-        </>
+        </div>
       ) : (
         <>
           <img src={LogoImg} alt="main logo" id="logo-img" />
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -65,7 +65,7 @@ function Navbar() {
           </p>
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -102,7 +102,7 @@ function Navbar() {
           </p>
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -139,7 +139,7 @@ function Navbar() {
           </p>
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -176,7 +176,7 @@ function Navbar() {
           </p>
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -213,7 +213,7 @@ function Navbar() {
           </p>
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -250,7 +250,7 @@ function Navbar() {
           </p>
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -287,7 +287,7 @@ function Navbar() {
           </p>
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle font-size-main"
               href="#"
               role="button"
               data-bs-toggle="dropdown"

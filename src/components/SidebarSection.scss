@@ -1,6 +1,5 @@
 .sidebar-section {
   position: relative;
-  margin-top: 5.7%;
   background: black;
   font-size: 1em;
 }
@@ -12,6 +11,7 @@
 }
 
 .logout-container {
+  // width: 16%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +19,7 @@
   padding: 0.5em 1em;
   border-top: 1px solid white;
   position: fixed;
+  // margin-top: 2em;
   bottom: 0;
   left: 0;
   right: 0;
@@ -61,8 +62,18 @@
   flex: 1; // This will allow your content to grow and fill the remaining space
   // Other styles for your content
 }
+@media (width >= 768px) and (width<=1366px) {
+  .sidebar-section {
+    display: block;
+  }
+}
+@media (width>= 800px) and (width <= 1280px) {
+  .sidebar-section {
+    display: block;
+  }
+}
 
-@media (width < 768px) {
+@media (width < 834px) {
   .sidebar-section {
     display: none;
   }

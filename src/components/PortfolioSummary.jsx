@@ -9,20 +9,6 @@ import {
 } from "../assets";
 function PortfolioSummary() {
   const [isMobile, setIsMobile] = React.useState(false);
-  const [isTablet, setIsTablet] = React.useState(false);
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth < 769) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const content = [
     {
@@ -171,6 +157,7 @@ function PortfolioSummary() {
       ],
     },
   ];
+
   return (
     <div className="portfolio-summary">
       <SidebarSection />
@@ -193,17 +180,11 @@ function PortfolioSummary() {
             />
           </div>
         </div>
-        <div
-          id="main-container"
-          style={{
-            gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-            gap: isMobile ? "1em" : "auto",
-          }}
-        >
+        <div id={`main-container${isMobile ? "-active" : ""}`}>
           {content.map((item, index) => (
             <div
               className={`portfolio-summary-content-container ${
-                isMobile && "portfolio-summary-content-container-1"
+                isMobile ? "portfolio-summary-content-container-1" : ""
               }`}
             >
               <div className="portfolio-summary-heading">
@@ -222,65 +203,35 @@ function PortfolioSummary() {
               </div>
               <img
                 src={item.mainImage}
-                style={{ objectFit: "contain", width: "100%" }}
+                style={{
+                  objectFit: "contain",
+                  width: isMobile ? "80%" : "90%",
+                  height: "auto",
+                }}
                 alt="main image"
               />
               <div className="city-container">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "0.5em",
-                  }}
-                >
+                <div className="city1">
                   {item.city1.map((item, index) => (
-                    <div
-                      key={index}
-                      className="city1"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        gap: "0.5em",
-                      }}
-                    >
+                    <div key={index} className="city1">
                       <div
                         style={{
                           backgroundColor: item.color,
-                          height: "1em",
-                          width: "1em",
                         }}
+                        className="city1-box"
                       ></div>
                       <p style={{ margin: "0" }}>{item.title}</p>
                     </div>
                   ))}
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "0.5em",
-                  }}
-                >
+                <div className="city1">
                   {item.city2.map((item, index) => (
-                    <div
-                      key={index}
-                      className="city2"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        gap: "0.5em",
-                      }}
-                    >
+                    <div key={index} className="city1">
                       <div
                         style={{
                           backgroundColor: item.color,
-                          height: "1em",
-                          width: "1em",
                         }}
+                        className="city1-box"
                       ></div>
                       <p style={{ margin: "0" }}>{item.title}</p>
                     </div>

@@ -1,6 +1,6 @@
 .portfolio-summary {
   width: 100%;
-  height: auto;
+  height: 100vh;
   background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
   background-repeat: no-repeat;
   background-position: center;
@@ -31,11 +31,10 @@
 
 .portfolio-summary-container {
   width: 80%;
-  height: auto;
+  height: 100%;
   margin: auto;
   display: flex;
-  padding-top: 2em;
-  margin-top: 4.2em;
+  padding-top: 1em;
   flex-direction: column;
   gap: 3em;
 }
@@ -54,6 +53,14 @@
 
 #main-container {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow-y: scroll;
+}
+
+#main-container-active {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  overflow-y: scroll;
 }
 
 .portfolio-summary-content-container {
@@ -78,6 +85,8 @@
     align-items: center;
     gap: 0.5em;
     h2 {
+      font-family: "montserrat";
+      font-weight: bold 600;
       font-size: 1.25em;
     }
     img {
@@ -97,25 +106,65 @@
 }
 
 .portfolio-summary-content-container-1 {
-  width: 70%;
-  height: 100%;
+  width: 60%;
+  height: 70vh;
   gap: 1em;
   padding: 1em;
+  border: 1px;
 }
-
-@media (width<768px) {
+.city-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  .city1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    .city1-box {
+      height: 1em;
+      width: 1em;
+    }
+    p {
+      font-size: 0.8em;
+    }
+  }
+}
+@media (width<834px) {
   #main-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .portfolio-summary-content-container-1 {
-    width: 100%;
-    padding: 1em;
+  .portfolio-summary-content-container {
+    width: 90%;
+    height: 50vh;
+    padding: 2em;
+    object-fit: contain;
     .portfolio-summary-heading {
       h2 {
-        font-size: 0.9em;
+        font-size: 0.7em;
       }
       img {
-        width: 1.2em;
+        width: 1em;
+      }
+    }
+  }
+  .city-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    .city1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      .city1-box {
+        height: 1em;
+        width: 1em;
+      }
+      p {
+        font-size: 0.8em;
       }
     }
   }
