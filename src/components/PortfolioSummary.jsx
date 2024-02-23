@@ -172,11 +172,13 @@ function PortfolioSummary() {
               onClick={() => setIsMobile(true)}
               src={PSummary1}
               alt="single lists"
+              style={{ cursor: "pointer" }}
             />
             <img
               onClick={() => setIsMobile(false)}
               src={PSummary2}
               alt="Multi Lists"
+              style={{ cursor: "pointer" }}
             />
           </div>
         </div>
