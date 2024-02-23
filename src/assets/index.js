@@ -29,6 +29,9 @@ import Bagalur3 from "./Bagalur/Group 1496.svg";
 import Bagalur4 from "./Bagalur/Group 1499.svg";
 import Bagalur5 from "./Bagalur/Group 1495.svg";
 import Building from "./Bagalur/Building Status.png";
+import Land1 from "./Bagalur/Group 1308.png";
+import Land2 from "./Bagalur/Group 1307.png";
+import Land3 from "./Bagalur/Group 1305.png";
 export {
   LogoImg,
   InvalidLogin,
@@ -61,4 +64,7 @@ export {
   Bagalur4,
   Bagalur5,
   Building,
+  Land1,
+  Land2,
+  Land3,
 };

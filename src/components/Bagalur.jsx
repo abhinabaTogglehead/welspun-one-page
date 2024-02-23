@@ -9,6 +9,9 @@ import {
   Bagalur4,
   Bagalur5,
   Building,
+  Land1,
+  Land2,
+  Land3,
 } from "../assets";
 
 function Bagalur() {
@@ -112,7 +115,50 @@ function Bagalur() {
               <div></div>
             </div>
           </div>
-          <div id="three-section"></div>
+          <div id="three-section">
+            <div className="land-details-container">
+              <div className="land-details">
+                <img style={{ width: "1.5em" }} src={Land1} alt=" land" />
+                <h3
+                  className="poppins-semibold"
+                  style={{ margin: "0", fontSize: "1.6em" }}
+                >
+                  Land Details
+                </h3>
+              </div>
+              <div className="land-details-number">
+                <h3 className="poppins-semibold">100%</h3>
+              </div>
+            </div>
+            <div className="land-details-container">
+              <div className="land-details">
+                <img style={{ width: "1.5em" }} src={Land2} alt=" land" />
+                <h3
+                  className="poppins-semibold"
+                  style={{ margin: "0", fontSize: "1.6em" }}
+                >
+                  Approvals
+                </h3>
+              </div>
+              <div className="land-details-number">
+                <h3 className="poppins-semibold">100%</h3>
+              </div>
+            </div>
+            <div className="land-details-container">
+              <div className="land-details">
+                <img style={{ width: "1.5em" }} src={Land3} alt=" land" />
+                <h3
+                  className="poppins-semibold"
+                  style={{ margin: "0", fontSize: "1.6em" }}
+                >
+                  Development Status
+                </h3>
+              </div>
+              <div className="land-details-number">
+                <h3 className="poppins-semibold">75%</h3>
+              </div>
+            </div>
+          </div>
           <div className="bagalur-container">
             <div className="bagalur">
               <div>
@@ -175,6 +221,7 @@ function Bagalur() {
                 <img src="" alt="" />
               </div>
               <img
+                className="building-img"
                 style={{ width: "16em", display: "block", margin: "auto" }}
                 src={Building}
                 alt="bagalur"
