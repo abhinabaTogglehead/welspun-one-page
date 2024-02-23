@@ -12,7 +12,6 @@
   justify-content: space-between;
   backdrop-filter: blur(50px);
   scrollbar-color: #333333;
-  scrollbar-width: thin;
   position: relative;
   overflow-y: hidden !important;
 }
@@ -149,7 +148,6 @@
 }
 @media (width<=1024px) {
   .investment-summery {
-    margin-top: 2em;
     overflow-y: hidden;
   }
   #box-container {
