@@ -11,16 +11,16 @@
 }
 
 .logout-container {
-  // width: 16%;
+  width: 16%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
   padding: 0.5em 1em;
   border-top: 1px solid white;
-  position: fixed;
-  // margin-top: 2em;
-  bottom: 0;
+  position: absolute;
+  margin-top: 2em;
+  bottom: 15%;
   left: 0;
   right: 0;
   z-index: 999;

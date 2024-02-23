@@ -115,11 +115,11 @@ function SidebarSection() {
             Document{" "}
           </MenuItem>
         </Menu>
-        <div className="logout-container poppins-bold">
-          <img src={Logout} alt="logout" />
-          <p>Logout</p>
-        </div>
       </Sidebar>
+      <div className="logout-container poppins-bold">
+        <img src={Logout} alt="logout" />
+        <p>Logout</p>
+      </div>
     </>
   );
 }
