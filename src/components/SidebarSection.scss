@@ -73,8 +73,11 @@
   }
 }
 
-@media (width < 834px) {
+@media (width <= 834px) {
   .sidebar-section {
+    display: none;
+  }
+  .logout-container{
     display: none;
   }
 }
