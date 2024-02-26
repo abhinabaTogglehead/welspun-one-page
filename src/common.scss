@@ -21,7 +21,7 @@ img {
   background-color: #333333;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: $color-ED193A;
+  background-color: #89D1E9;
 }
 // .dummy {
 //   min-height: 100vh;
@@ -78,7 +78,6 @@ li:active {
 }
 html {
   scroll-behavior: smooth;
-  
 }
 // html,
 // body,
@@ -284,21 +283,18 @@ html [type="button"] {
   @include poppinsSemiBold;
   opacity: 0.9;
   text-align: justify;
-   
 }
 @mixin D18180 {
   @include textStyles(1.4em, 1.8em, 0px);
   @include poppinsRegular;
   opacity: 0.9;
   text-align: justify;
-   
 }
 @mixin CardText {
   @include textStyles(1.5em, 1.8em, 0px);
   @include poppinsMedium;
   opacity: 1;
   text-align: justify;
-   
 }
 
 /*============================
@@ -383,7 +379,6 @@ html [type="button"] {
   color: $color-231f20;
   @include poppinsSemiBold;
   text-align: justify;
-   
 }
 .section_name {
   font-size: 1.4em;
@@ -411,7 +406,6 @@ html [type="button"] {
   @include poppinsRegular;
   opacity: 0.9;
   text-align: justify;
-   
 }
 .navigation_wrapper {
   display: flex;
