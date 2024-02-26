@@ -30,7 +30,7 @@ function SidebarSection() {
         image="https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D"
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
-            height: "88vh",
+            height: "90vh",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "start",
             backgroundColor: "rgba(255, 255, 255, 0.25)",
