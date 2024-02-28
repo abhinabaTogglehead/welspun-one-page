@@ -112,7 +112,6 @@
   }
 }
 
-
 .portfolio-summary-content-container-1 {
   width: 80%;
   height: 85vh;
@@ -159,6 +158,9 @@
       img {
         width: 1em;
       }
+      .city-container p {
+        font-size: 0.5em;
+      }
     }
   }
   .city-container {
@@ -176,7 +178,7 @@
         width: 1em;
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.6em;
       }
     }
   }
