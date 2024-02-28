@@ -1,17 +1,34 @@
 .sidebar-section {
   position: relative;
-  background: black;
   font-size: 1em;
 }
 
 .menu-item {
-  background: #52448d;
-  box-shadow: none;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(50px);
   border-bottom: none;
+  &:hover {
+    background-color: #357ab8;
+  }
+}
+.menu-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+  border-bottom: none;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 .logout-container {
-  width: 16%;
+  width: 21em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +37,33 @@
   border-top: 1px solid white;
   position: absolute;
   margin-top: 2em;
-  bottom: 5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  &:hover {
+    background-color: #357ab8;
+  }
+  p {
+    display: inline;
+    margin: 0;
+  }
+  img {
+    display: inline;
+  }
+}
+
+.logout-container-mobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  border-top: 1px solid white;
+  position: absolute;
+  margin-top: 2em;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 999;
@@ -50,27 +93,6 @@
 .main-container {
   display: flex;
   flex-direction: row; // This will place your sidebar and content side by side
-}
-
-.sidebar-section {
-  flex: 0 0 auto; // This means your sidebar's size is based on its content
-  height: auto; // This allows your sidebar to grow as tall as it needs
-  // Other styles for your sidebar
-}
-
-.right-side-content {
-  flex: 1; // This will allow your content to grow and fill the remaining space
-  // Other styles for your content
-}
-@media (width >= 768px) and (width<=1366px) {
-  .sidebar-section {
-    display: block;
-  }
-}
-@media (width>= 800px) and (width <= 1280px) {
-  .sidebar-section {
-    display: block;
-  }
 }
 
 @media (width <= 834px) {

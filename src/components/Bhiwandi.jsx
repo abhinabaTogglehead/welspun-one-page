@@ -12,10 +12,11 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import MainMenu from "./MainMenu";
 function Bhiwandi() {
   return (
     <div className="bhiwandi-container">
-      <SidebarSection />
+      <MainMenu />
       <div className="bhiwandi">
         <Swiper
           spaceBetween={30}

@@ -30,7 +30,8 @@ function SidebarSection() {
         image="https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D"
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
-            height: "90vh",
+            width: "21em",
+            height: "100vh",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "start",
             backgroundColor: "rgba(255, 255, 255, 0.25)",
@@ -38,22 +39,38 @@ function SidebarSection() {
             "-webkit-backdrop-filter": "blur(50px)", // For Safari
             overflowY: "auto",
           },
+          [`.${sidebarClasses.root}`]: {
+            backgroundColor: "transparent",
+          },
         }}
       >
         <div className="logo-container">
           <img src={Mainlogo} alt="main logo" />
         </div>
-        <Menu style={{ objectFit: "contain" }} className="poppins-bold">
-          <MenuItem>
+        <Menu
+          menuItemStyles={{
+            button: {
+              backgroundColor: "transparent",
+              border: "none",
+            },
+          }}
+          // style={{ objectFit: "contain", width: "100%" }}
+          className="poppins-bold"
+        >
+          <MenuItem style={{ backgroundColor: "transparent" }}>
             <img src={InvestmentSummery} alt="investment summery" /> Investment
             Summary{" "}
           </MenuItem>
           <SubMenu
+            style={{
+              background: "transparent",
+            }}
             label="Portfolio Dashboard"
             icon={<img src={PortFolioDashboard} alt="portfolio dashboard" />}
           >
             <MenuItem
               className="menu-item"
+              style={{ "&&": { backgroundColor: "transparent" } }}
               icon={<img src={PortFolioSummery} alt="portfolio summery" />}
               onClick={() => navigate("/portfoliosummary")}
             >

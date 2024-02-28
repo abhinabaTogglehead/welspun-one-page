@@ -13,6 +13,7 @@ import {
   Land2,
   Land3,
 } from "../assets";
+import MainMenu from "./MainMenu";
 
 function Bagalur() {
   const BagalurImg = [
@@ -45,7 +46,7 @@ function Bagalur() {
 
   return (
     <div className="investment-summery">
-      <SidebarSection />
+      <MainMenu />
       <div id="bagalur-main-container">
         <div className="folio-no">
           <button className="poppins-medium">Folio no - 123456</button>

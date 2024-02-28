@@ -1,6 +1,6 @@
 .investment-summery {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.25);
   background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
   background-repeat: no-repeat;
@@ -31,19 +31,20 @@
 }
 
 #investment-summery-main-container {
-  width: 80%;
+  width: 100%;
   height: 100vh;
-  margin: auto;
   display: flex;
   padding-top: 1em;
   padding-bottom: 1em;
   align-items: safe;
   flex-direction: column;
+  padding-left: 1em;
   gap: 3em;
   overflow-y: auto;
 }
 
 .folio-no {
+  width: 98%;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -53,6 +54,9 @@
     border: 1px solid #707070;
     background: none;
     color: white;
+    font-size: 1.125em;
+    // position: relative;
+    // left: 85%;
   }
 }
 
@@ -60,11 +64,13 @@
   display: flex;
   flex-direction: column;
   h2 {
-    font-size: 2em;
+    font-size: 2.125em;
+    font-weight: 500;
   }
   p {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.125em;
+    font-weight: 400;
     opacity: 0.6;
   }
 }
@@ -72,11 +78,18 @@
 #box-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  // 28em
 }
-
+#box-main-container {
+  h2 {
+    font-size: 2.375em;
+    font-weight: 700;
+  }
+}
 .box {
   border-radius: 10px;
-  height: 12.5em;
+  // height: 13.125em;
+  height: 14em;
   margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -96,22 +109,20 @@
     height: 0.968em;
   }
   h3 {
-    font-family: "Poppins", sans-serif;
-    font-weight: medium;
+    font-weight: 500;
     color: #ffffff; // Example text color
-    font-size: 1em;
+    font-size: 1.125em;
   }
 
   p {
-    font-family: "Poppins", sans-serif;
-    font-weight: extrabold;
+    font-weight: 800;
     color: #0047ab; // Example text color
-    font-size: 2em;
+    font-size: 2.375em;
   }
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 3.063em;
+    height: 4.063em;
     object-fit: contain;
     z-index: 999;
   }
@@ -146,21 +157,124 @@
     }
   }
 }
+
 @media (width<=1024px) {
   .investment-summery {
     overflow-y: hidden;
+  }
+  #investment-summery-main-container {
+    width: 100%;
   }
   #box-container {
     grid-template-columns: repeat(2, 1fr);
     overflow-y: auto;
   }
+  .box {
+    height: 10em;
+    h3 {
+      font-size: 0.875em;
+    }
+    p {
+      font-size: 1.875em;
+    }
+  }
+  .folio-no {
+    button {
+      font-size: 0.875em;
+    }
+  }
+  #text-Section {
+    h2 {
+      font-size: 1.313em;
+    }
+    p {
+      font-size: 1.125em;
+    }
+  }
+  #box-main-container {
+    h2 {
+      font-size: 1.313em;
+      font-weight: 700;
+    }
+  }
+}
+@media (width<=1023px) {
+  .investment-summery {
+    overflow-y: hidden;
+  }
+  #investment-summery-main-container {
+    width: 100%;
+  }
+  #box-container {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-y: auto;
+  }
+  .box {
+    height: 10em;
+    h3 {
+      font-size: 0.875em;
+    }
+    p {
+      font-size: 1.875em;
+    }
+  }
+  .folio-no {
+    justify-content: left;
+    button {
+      font-size: 0.875em;
+    }
+  }
+  #text-Section {
+    h2 {
+      font-size: 1.313em;
+    }
+    p {
+      font-size: 1.125em;
+    }
+  }
+  #box-main-container {
+    h2 {
+      font-size: 1.313em;
+      font-weight: 700;
+    }
+  }
 }
 
 @media (width<768px) {
   #investment-summery-main-container {
-    width: 90%;
+    width: 100%;
   }
   #box-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, auto);
+  }
+  .box {
+    width: 95%;
+    height: 10em;
+    h3 {
+      font-size: 0.875em;
+    }
+    p {
+      font-size: 1.875em;
+    }
+  }
+  .folio-no {
+    justify-content: left;
+    button {
+      font-size: 0.875em;
+    }
+  }
+  #text-Section {
+    h2 {
+      font-size: 1.313em;
+    }
+    p {
+      font-size: 1.125em;
+    }
+  }
+  #box-main-container {
+    h2 {
+      font-size: 1.313em;
+      font-weight: 700;
+    }
   }
 }

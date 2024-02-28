@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Sidebar } from "react-pro-sidebar";
 import { LogoImg } from "../assets";
 import { HiMenuAlt1 } from "react-icons/hi";
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import Navbar2 from "./Navbar2";
 function Navbar() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 834);
 
   useEffect(() => {
     function handleResize() {
@@ -19,12 +21,9 @@ function Navbar() {
   return (
     <div className="navbar-container">
       {isMobile ? (
-        <div className="mobile-navbar">
-          <HiMenuAlt1 id="menu-icon" />
-          <img src={LogoImg} alt="main logo" id="logo-img" />
-        </div>
+        <Navbar2 />
       ) : (
-        <>
+        <div className="desktop-navbar navbar-container">
           <img src={LogoImg} alt="main logo" id="logo-img" />
           <p className="nav-item dropdown poppins-medium navbar-text">
             <a
@@ -322,7 +321,7 @@ function Navbar() {
               </li>
             </ul>
           </p>
-        </>
+        </div>
       )}
     </div>
   );

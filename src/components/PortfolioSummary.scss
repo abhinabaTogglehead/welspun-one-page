@@ -1,6 +1,6 @@
 .portfolio-summary {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
   background-repeat: no-repeat;
   background-position: center;
@@ -31,18 +31,21 @@
 
 .portfolio-summary-container {
   width: 80%;
-  height: 90%;
+  height: 100%;
   margin: auto;
   display: flex;
-  padding-top: 1em;
+  padding: 1em;
   flex-direction: column;
   gap: 3em;
+  overflow-y: auto;
 }
 
 .portfolio-summary-text {
+  width: 98%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: auto;
   .portfolio-summary-img {
     display: flex;
     justify-content: center;
@@ -54,13 +57,12 @@
 #main-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  overflow-y: scroll;
 }
 
 #main-container-active {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 .portfolio-summary-content-container {
@@ -87,7 +89,7 @@
     h2 {
       font-family: "montserrat";
       font-weight: bold 600;
-      font-size: 1.25em;
+      font-size: 1.625em;
     }
     img {
       width: 1.3em;
@@ -102,15 +104,24 @@
     flex-direction: column;
     gap: 1em;
     justify-content: flex-start;
+    p {
+      font-size: 1.188em;
+      font-weight: 500;
+      opacity: 0.9;
+    }
   }
 }
 
+
 .portfolio-summary-content-container-1 {
   width: 80%;
-  height: 100vh;
+  height: 85vh;
   gap: 1em;
   padding: 1em;
   border: 1px;
+  .portfolio-summary-heading h2 {
+    font-size: 1.75em;
+  }
 }
 .city-container {
   display: flex;
@@ -133,10 +144,11 @@
 }
 @media (width<834px) {
   #main-container {
+    width: 100%;
     grid-template-columns: repeat(1, 1fr);
   }
   .portfolio-summary-content-container {
-    width: 90%;
+    width: 100%;
     height: 42vh;
     padding: 2em;
     object-fit: contain;

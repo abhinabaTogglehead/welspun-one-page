@@ -160,6 +160,9 @@
   margin-top: 0.125em;
   margin-left: 0.125em;
 }
+a {
+  font-size: 1em;
+}
 
 @media screen and (max-width: 1024px) {
   .navbar-container {
@@ -194,6 +197,17 @@
   .navbar-container {
     #logo-img {
       width: 10em;
+    }
+  }
+}
+
+@media (width<=834px) {
+  .navbar-container {
+    .desktop-navbar {
+      display: none;
+    }
+    .mobile-navbar {
+      width: 90%;
     }
   }
 }

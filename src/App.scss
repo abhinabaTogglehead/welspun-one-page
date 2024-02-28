@@ -4,6 +4,12 @@ p {
 }
 
 body {
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-y: none;
+  overflow-x: none;
+  // background-color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  background-color: black;
 }

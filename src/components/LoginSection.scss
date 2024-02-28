@@ -1,6 +1,6 @@
 .login-section {
   width: 100%;
-  height: 47.375em;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.25);
   background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
   background-repeat: no-repeat;
@@ -29,24 +29,35 @@
 }
 
 .login-container {
-  width: 30%;
+  width: 45.63em;
+  height: 43em;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 22px;
   backdrop-filter: blur(60px);
   padding: 2em;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin: auto;
+  gap: 1em;
+  h2 {
+    font-size: 2.5em;
+    text-align: left;
+  }
 }
 
 .login-heading {
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1em;
 }
 
 #login-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 label {
@@ -60,13 +71,16 @@ label {
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 30em;
+  height: 3.75em;
   padding: 0.5em;
   border-radius: 5px;
   background-color: #ffffff;
 }
 
 button[type="submit"] {
+  width: auto;
+  height: 3.75em;
   padding: 0.5em 1em;
   background-color: #4a90e2;
   color: #ffffff;
@@ -92,7 +106,7 @@ button[type="submit"] {
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  margin-top: 1em;
+  // margin-top: 1em;
 }
 #invalid-login-img {
   width: 1.2em;
@@ -104,24 +118,26 @@ button[type="submit"] {
   display: inline;
   margin: 0;
 }
-@media (width>1920px) and (width<=2560px) {
-  .login-container {
-    width: 25%;
-  }
-}
-@media (width<= 1440px) {
-  .login-container {
-    width: 40%;
-  }
-}
-@media (width<= 1024px) {
-  .login-container {
-    width: 40%;
-  }
-}
 
-@media (width< 834px) {
+@media (width< 768px) {
   .login-container {
     width: 90%;
+    height: 98%;
+    .input-container {
+      width: 100%;
+    }
+    input[type="text"] {
+      width: 100%;
+      height: 3em;
+    }
+    button[type="submit"] {
+      width: auto;
+    }
+    .invalid-login {
+      display: none;
+    }
   }
+  // label {
+  //   font-size: 0.7em;
+  // }
 }
