@@ -69,13 +69,14 @@
 
 .portfolio-summary-content-container {
   border-radius: 10px;
-  height: 37.5em;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   backdrop-filter: blur(30px);
   overflow: hidden;
+  padding: 1.5em;
   gap: 2em;
   background: rgba(56, 53, 53, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
