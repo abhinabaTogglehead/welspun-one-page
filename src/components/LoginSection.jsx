@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./LoginSection.scss";
 import { InvalidLogin, RightArrow } from "../assets";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import Navbar2 from "./Navbar2";
 function LoginSection() {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 834);
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 834);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
-      <Navbar />
-      <div className="login-section">
+      {isMobile && <Navbar2 />}
+      {!isMobile && <Navbar />}
+      <div className="login-section ">
         <div className="login-container">
-          <div style={{ width: "78%", textAlign: "left" }}>
+          <div className="login-heading-container">
             <h2
               className="login-heading poppins-bold"
               style={{

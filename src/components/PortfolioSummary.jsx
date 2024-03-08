@@ -226,7 +226,7 @@ function PortfolioSummary() {
                   src={item.mainImage}
                   style={{
                     objectFit: "contain",
-                    width: isMobile ? "80%" : "90%",
+                    width: isMobile ? "100%" : "100%",
                     height: "auto",
                   }}
                   alt="main image"

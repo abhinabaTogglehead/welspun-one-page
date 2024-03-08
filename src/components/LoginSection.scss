@@ -1,5 +1,7 @@
+@import "../common.scss";
+
 .login-section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: rgba(255, 255, 255, 0.25);
   background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
@@ -57,6 +59,8 @@
 #login-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
   gap: 1em;
 }
 
@@ -119,12 +123,28 @@ button[type="submit"] {
   margin: 0;
 }
 
+.login-heading-container {
+  width: 78%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
 @media (width< 768px) {
   .login-container {
     width: 90%;
-    height: 98%;
+    height: auto;
+    padding: 2em;
     .input-container {
-      width: 100%;
+      width: 80vw;
+      height: 20vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      label {
+        margin-bottom: 0;
+      }
     }
     input[type="text"] {
       width: 100%;
@@ -132,9 +152,17 @@ button[type="submit"] {
     }
     button[type="submit"] {
       width: auto;
+      padding: 0 auto;
     }
     .invalid-login {
-      display: none;
+      // display: none;
+    }
+  }
+  .login-heading-container {
+    width: 100%;
+    .login-heading {
+      margin-bottom: 0;
+      padding-top: 1em;
     }
   }
   // label {

@@ -1,5 +1,5 @@
 .navbar2 {
-  //   position: absolute;
+  position: absolute;
 }
 
 .main-navbar {
@@ -31,4 +31,41 @@
 
 .sub-menu {
   padding-left: 20px; /* Add some indentation for sub-menu items */
+}
+.dropdown-container {
+  position: absolute;
+  top: 6.5vh;
+  left: -100%;
+  z-index: 9999;
+  background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(50px); /* Adjust the blur value as needed */
+  -webkit-backdrop-filter: blur(50px); /* For Safari */
+  border-right: 1px solid rgba(150, 124, 124, 0.18);
+  transition: left 0.3s ease; /* Smooth transition for left position */
+}
+
+.dropdown-container-mobile2 {
+  height: 80vh;
+  background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
+  background-color: rgba(97, 76, 76, 0.25);
+  backdrop-filter: blur(50px); /* Adjust the blur value as needed */
+  -webkit-backdrop-filter: blur(50px); /* For Safari */
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  transition: height 2ms ease; /* Smooth transition for height */
+}
+
+.dropdown-container-mobile2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("https://images.unsplash.com/photo-1690321607902-d97c4b909a23?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NzE4ODU4fHxlbnwwfHx8fHw%3D");
+  background-color: rgba(97, 76, 76, 0.25);
+  backdrop-filter: blur(20px); /* Adjust the blur value as needed */
+  -webkit-backdrop-filter: blur(20px); /* For Safari */
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: -1;
 }

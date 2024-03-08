@@ -16,7 +16,12 @@ function Navbar() {
 
     window.addEventListener("resize", handleResize);
 
+
     return () => window.removeEventListener("resize", handleResize);
+    if (!CSS.supports("backdrop-filter", "blur(10px)")) {
+      document.body.classList.add("no-backdrop-filter");
+    }
+
   }, []);
   return (
     <div className="navbar-container">

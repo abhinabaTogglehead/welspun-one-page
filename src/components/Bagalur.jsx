@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Bagalur.scss";
 import SidebarSection from "./SidebarSection";
 import {
@@ -44,9 +44,20 @@ function Bagalur() {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 834);
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 834);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobile]);
+
   return (
     <div className="investment-summery">
-      <MainMenu />
+      {!isMobile && <MainMenu />}
       <div id="bagalur-main-container">
         <div className="folio-no">
           <button className="poppins-medium">Folio no - 123456</button>
@@ -63,7 +74,7 @@ function Bagalur() {
                         display: "flex",
                         justifyContent: "left",
                         alignItems: "flex-start",
-                        gap: "0.5em",
+                        gap: "1em",
                       }}
                     >
                       <img src={img.img} alt="bagalur" />
@@ -80,10 +91,9 @@ function Bagalur() {
               <div>
                 <h3>Project Progress (%)</h3>
                 {/* Placeholder for project progress image */}
-                <img src="" alt="" />
               </div>
               <img
-                style={{ width: "20em", display: "block", margin: "auto" }}
+                style={{ width: "100%", display: "block", margin: "auto" }}
                 src={BagalurMain}
                 alt="bagalur"
               />
@@ -119,7 +129,11 @@ function Bagalur() {
           <div id="three-section">
             <div className="land-details-container">
               <div className="land-details">
-                <img style={{ width: "1.5em" }} src={Land1} alt=" land" />
+                <img
+                  style={{ width: "1.5em", paddingBottom: "1.5em" }}
+                  src={Land1}
+                  alt=" land"
+                />
                 <h3
                   className="poppins-semibold"
                   style={{ margin: "0", fontSize: "1.6em" }}
@@ -133,7 +147,11 @@ function Bagalur() {
             </div>
             <div className="land-details-container">
               <div className="land-details">
-                <img style={{ width: "1.5em" }} src={Land2} alt=" land" />
+                <img
+                  style={{ width: "1.5em", paddingBottom: "1.5em" }}
+                  src={Land2}
+                  alt=" land"
+                />
                 <h3
                   className="poppins-semibold"
                   style={{ margin: "0", fontSize: "1.6em" }}
@@ -147,7 +165,11 @@ function Bagalur() {
             </div>
             <div className="land-details-container">
               <div className="land-details">
-                <img style={{ width: "1.5em" }} src={Land3} alt=" land" />
+                <img
+                  style={{ width: "1.5em", paddingBottom: "1.5em" }}
+                  src={Land3}
+                  alt=" land"
+                />
                 <h3
                   className="poppins-semibold"
                   style={{ margin: "0", fontSize: "1.6em" }}
@@ -160,17 +182,22 @@ function Bagalur() {
               </div>
             </div>
           </div>
-          <div className="bagalur-container">
+          <div className="bagalur-container-2">
             <div className="bagalur">
               <div>
                 <h3>Building Status (Nos.)</h3>
                 {/* Placeholder for project progress image */}
-                <img src="" alt="" />
               </div>
               <img
-                style={{ width: "16em", display: "block", margin: "auto" }}
+                // style={{
+                //   width: "46%",
+                //   objectFit: "cover",
+                //   display: "block",
+                //   margin: "auto",
+                // }}
                 src={Building}
                 alt="bagalur"
+                className="building-img"
               />
               <div className="city1">
                 <div
@@ -219,11 +246,15 @@ function Bagalur() {
               <div>
                 <h3>Leasing Status (MM sq.ft.)</h3>
                 {/* Placeholder for project progress image */}
-                <img src="" alt="" />
               </div>
               <img
                 className="building-img"
-                style={{ width: "16em", display: "block", margin: "auto" }}
+                // style={{
+                //   width: "46%",
+                //   objectFit: "cover",
+                //   display: "block",
+                //   margin: "auto",
+                // }}
                 src={Building}
                 alt="bagalur"
               />

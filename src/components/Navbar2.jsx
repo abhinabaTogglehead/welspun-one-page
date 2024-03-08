@@ -16,7 +16,7 @@ import {
   Mainlogo,
 } from "../assets";
 
-import { Button, Menu, Dropdown, Space } from "antd";
+import { Menu } from "antd";
 import { Navigate, useNavigate } from "react-router-dom";
 
 function CustomIcon({ src, alt }) {
@@ -102,6 +102,7 @@ const items = [
     label: "Document",
   },
 ];
+
 function Navbar2() {
   const [isMobile, setIsMobile] = useState(false);
   navigate = useNavigate();
@@ -113,24 +114,22 @@ function Navbar2() {
     <>
       <div className="navbar-container">
         <div className="mobile-navbar">
-          <Dropdown
-            menu={{
-              items,
-               
-            }}
-            trigger={["click"]}
-          >
-            <a
-              onClick={(e) => e.preventDefault()}
-              className="ant-dropdown-link"
-            >
-              <HiMenuAlt1 id="menu-icon" onClick={handleClick} />
-            </a>
-          </Dropdown>
+          <HiMenuAlt1 id="menu-icon" onClick={handleClick} />
           <img src={LogoImg} alt="main logo" id="logo-img" />
         </div>
       </div>
-      <div></div>
+      <div className={`dropdown-container${isMobile ? "-mobile2" : ""}`}>
+        <Menu
+          mode="inline"
+          theme={subtheme}
+          items={items}
+          className={`menu-items${isMobile ? "-mobile" : ""}`}
+        />
+        <div className={`logout-container${isMobile ? "-mobile" : ""}`}>
+          <img src={Logout} alt="logout" />
+          <p>Logout</p>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Bhiwandi.scss";
 import SidebarSection from "./SidebarSection";
 import { useRef, useState } from "react";
@@ -14,9 +14,20 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { Pagination } from "swiper/modules";
 import MainMenu from "./MainMenu";
 function Bhiwandi() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 834);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 834);
+    }
+    
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="bhiwandi-container">
-      <MainMenu />
+       {!isMobile && <MainMenu />}
       <div className="bhiwandi">
         <Swiper
           spaceBetween={30}
